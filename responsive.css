@@ -1,0 +1,154 @@
+/* Common styles for both desktop and mobile */
+/* import font dari google font */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap");
+
+/* Common styling for body and header */
+body {
+  /* color: #112a3b; */
+  font-family: "Dosis", Verdana;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+/* untuk screen mobile (kurang dari 576px) */
+@media only screen and (max-width: 576px) {
+  .container {
+    width: auto;
+    background-position: inherit;
+  }
+
+  .logo {
+    display: none;
+  }
+  .logoweb {
+    justify-content: flex-start;
+  }
+
+  .logoweb h2 {
+    display: block;
+    font-size: 18px;
+  }
+  .checkbtn {
+    display: block;
+    font-size: 18px;
+  }
+
+  .nav-bar a,
+  .btnLogin-popup {
+    width: 100%;
+    display: none;
+    align-items: center;
+    text-align: center;
+    height: 62vh;
+    background: #eff3f5;
+    top: -100%;
+    transition: all 0.5s;
+    font-size: 16px;
+    overflow: hidden;
+
+    /* arah transform dan waktu transisi */
+    transform: scaleY(1);
+    transition: transform 0.5s ease, height 0.2s;
+  }
+
+  .nav-bar a::after,
+  .nav-bar a:hover::after {
+    background: none;
+  }
+
+  .nav-bar .btnLogin-popup {
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgb(59, 17, 52);
+  }
+
+  #check:checked ~ .nav-bar {
+    display: block;
+  }
+
+  .frontpage main {
+    font-size: 16px;
+    width: 50%;
+    /* height: auto;
+        min-height: calc(100vh - 378px - 42px); */
+  }
+
+  .main-page h1 {
+    font-size: 70px;
+  }
+  .main-page button {
+    width: 150px;
+    height: 25px;
+    font-size: 16px;
+  }
+
+  .main-page .btn-subscribe:hover {
+    background: #d38715;
+    color: rgb(117, 0, 0);
+  }
+
+  .reading-page {
+    width: auto;
+  }
+
+  .reading-page .icon {
+    font-size: 18px;
+  }
+
+  .reading-page h3 {
+    font-size: 16px;
+  }
+
+  .reading-page p {
+    font-size: 14px;
+  }
+
+  .gallery {
+    display: grid;
+    width: auto;
+    margin: 50%;
+    justify-content: center;
+  }
+}
+
+/* untuk screen desktop (lebih dari 768px) */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: auto;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .logoweb h2 {
+    display: none;
+  }
+
+  .frontpage {
+    height: 100%;
+  }
+  .frontpage main {
+    font-size: 18px;
+    width: 50%;
+  }
+
+  .main-page h1 {
+    font-size: 70px;
+  }
+  .main-page button {
+    width: 150px;
+    height: 25px;
+    font-size: 16px;
+  }
+
+  .main-page .btn-subscribe:hover {
+    background: #d38715;
+    color: rgb(117, 0, 0);
+  }
+}
