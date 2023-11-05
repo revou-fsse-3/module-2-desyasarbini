@@ -27,10 +27,12 @@
           <label for="check" class="checkbtn">
             <i class="fa-solid fa-bars"></i>
           </label>
-          <a href="#">books</a>
-          <a href="#">comics</a>
-          <a href="#">recipes</a>
-          <a href="#">favorite</a>
+          <ul class="menu">
+            <li><a href="#">books</a></li>
+            <li><a href="#">comics</a></li>
+            <li><a href="#">recipes</a></li>
+            <li><a href="#">favorite</a></li>
+          </ul>
           <button class="btnLogin-popup">login</button>
         </nav>
       </header>
@@ -43,7 +45,14 @@
             voluptatum aliquam ullam eius dicta vero, ut fuga sequi nemo natus
             omnis? Deserunt.
           </p>
-          <button class="btn-subscribe">keep me updated</button>
+          <button
+            class="btn-subscribe"
+            type="submit"
+            value="kirim"
+            onclick="subscribe(event)"
+          >
+            keep me updated
+          </button>
         </main>
         <aside>
           <!-- layout untuk login dan signup form -->
@@ -104,21 +113,21 @@
               <form action="#">
                 <div class="input-box">
                   <span class="icon">
-                    <i class="fa-solid fa-user" style="color: #e33535"></i>
+                    <i class="fa-solid fa-user" style="color: #341a4a"></i>
                   </span>
                   <input id="username" type="text" required />
                   <label>username</label>
                 </div>
                 <div class="input-box">
                   <span class="icon">
-                    <i class="fa fa-envelope" style="color: #e33535"></i>
+                    <i class="fa fa-envelope" style="color: #341a4a"></i>
                   </span>
                   <input id="email_signup" type="email" required />
                   <label>e-mail</label>
                 </div>
                 <div class="input-box">
                   <span class="icon">
-                    <i class="fa-solid fa-lock" style="color: #e33535"></i>
+                    <i class="fa-solid fa-lock" style="color: #341a4a"></i>
                   </span>
                   <input id="password_signup" type="password" required />
                   <label>password</label>
@@ -149,7 +158,7 @@
       </div>
     </div>
     <section class="reading-page">
-      <h2>Read Section</h2>
+      <!-- <h2>Read Section</h2> -->
       <div class="books">
         <div class="icon"><i class="fa-solid fa-book"></i></div>
         <h3>Books</h3>
@@ -166,7 +175,7 @@
           aspernatur commodi quas excepturi cumque fugiat!
         </p>
       </div>
-      <div class="recipe">
+      <div class="recipes">
         <div class="icon"><i class="fa-solid fa-cookie-bite"></i></div>
         <h3>Recipes</h3>
         <p>
@@ -183,31 +192,37 @@
         </p>
       </div>
     </section>
-    <section class="gallery">
+    <section id="gallery">
       <h2>Gallery</h2>
-      <img src="https://source.unsplash.com/random/200x200" alt="" />
-      <img src="https://source.unsplash.com/random/200x300" alt="" />
-      <img src="https://source.unsplash.com/random/200x200" alt="" />
-      <img src="https://source.unsplash.com/random/220x200" alt="" />
-      <img src="https://source.unsplash.com/random/230x200" alt="" />
-      <img
-        src="./asset/book2.jpg"
-        alt="book-img-2"
-        width="200px"
-        height="300px"
-      />
-
-      <!-- <img src="./asset/book1.jpg" alt="book-img-1" />
-      <img src="./asset/book2.jpg" alt="book-img-2" />
-      <img src="./asset/book3.jpg" alt="book-img-3" />
-      <img src="./asset/stories1.png" alt="stories-img-1" />
-      <img src="./asset/stories2.png" alt="stories-img-2" />
-      <img src="./asset/stories3.jpg" alt="stories-img-3" />
-      <img src="./asset/recipe1.jpg" alt="recipe-img-1" />
-      <img src="./asset/recipe1.jpg" alt="recipe-img-2" />
-      <img src="./asset/recipe1.jpg" alt="recipe-img-3" />
-      <img src="./asset/recipe1.jpg" alt="recipe-img-4" /> -->
+      <div class="gallery-container">
+        <img
+          class="grid-item satu"
+          src="./asset/book1.jpg"
+          alt="rich-dad-poor-dad-book-img"
+        />
+        <img
+          class="grid-item dua"
+          src="./asset/stories3.jpg"
+          alt="stories-img-3"
+        />
+        <img
+          class="grid-item tiga"
+          src="./asset/stories1.png"
+          alt="book-img-2"
+        />
+        <img
+          class="grid-item empat"
+          src="./asset/solo leveling.jpg"
+          alt="solo-leveling-comic-img"
+        />
+        <img
+          class="grid-item lima"
+          src="./asset/comic1.jpg"
+          alt="one-piece-comic-img"
+        />
+      </div>
     </section>
+
     <footer>
       <a href="https://www.linkedin.com/in/desya-sarbini/">Linkedin</a>
     </footer>

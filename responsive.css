@@ -107,35 +107,49 @@ header {
   .reading-page p {
     font-size: 14px;
   }
-
-  .gallery {
-    display: grid;
-    width: auto;
-    margin: 50%;
-    justify-content: center;
-  }
 }
 
-/* untuk screen desktop (lebih dari 768px) */
+/* untuk screen tablet (kurang dari 768px) */
 @media only screen and (max-width: 768px) {
   .container {
-    width: auto;
+    width: 100%;
+    height: 100vh;
   }
 
   .header {
     width: 100%;
   }
 
-  .logoweb h2 {
+  .logo {
     display: none;
   }
 
+  .logoweb h2 {
+    display: block;
+  }
+
+  .menu {
+    width: 100%;
+    margin-right: 10px;
+    /* align-items: center; */
+  }
+
+  .menu li {
+    margin-right: 10px;
+    text-align: center;
+  }
+
   .frontpage {
-    height: 100%;
+    height: 80%;
   }
   .frontpage main {
     font-size: 18px;
-    width: 50%;
+    width: 100%;
+    height: 100px;
+  }
+
+  .frontpage aside {
+    display: block;
   }
 
   .main-page h1 {
@@ -150,5 +164,46 @@ header {
   .main-page .btn-subscribe:hover {
     background: #d38715;
     color: rgb(117, 0, 0);
+  }
+
+  aside .wrapper {
+    width: 360px;
+  }
+
+  .reading-page {
+    width: auto;
+    margin: 20px 0;
+    padding: 10px;
+    height: fit-content;
+  }
+
+  #gallery .gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 0.5fr);
+  }
+
+  #gallery .gallery-container .satu {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #gallery .gallery-container .dua {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #gallery .gallery-container .tiga {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+  #gallery .gallery-container .empat {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  #gallery .gallery-container .lima {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  @media only screen and (max-width: 1400px) {
   }
 }
