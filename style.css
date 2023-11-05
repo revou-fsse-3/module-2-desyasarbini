@@ -462,14 +462,6 @@ bagian form signup dan login */
   margin: 20px 0 20px 0;
 }
 
-/* .gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 200px);
-  grid-template-rows: repeat(4, 200px);
-  justify-content: center;
-  grid-gap: 10px;
-} */
-
 #gallery {
   display: block;
   padding: 20px;
