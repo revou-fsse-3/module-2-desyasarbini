@@ -511,6 +511,20 @@ bagian form signup dan login */
   grid-row: 1 / span 3;
 }
 
+.visible-desktop {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.visible-mobile {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
 /* styling footer */
 footer {
   display: flex;

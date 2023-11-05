@@ -10,11 +10,33 @@ header {
   padding: 20px 20px;
 }
 
+.visible-mobile {
+  display: none;
+  width: 300px;
+  height: 150px;
+  justify-content: center;
+}
+
+.visible-tablet {
+  display: block;
+  width: 300px;
+  height: 150px;
+  justify-content: center;
+}
+
 /* untuk screen mobile (kurang dari 576px dan lebih dari 400px) */
 @media only screen and (max-width: 520px) {
   .container {
     width: auto;
     background-position: inherit;
+  }
+
+  .visible-mobile {
+    display: block;
+  }
+
+  .visible-tablet {
+    display: none;
   }
 
   .logo {

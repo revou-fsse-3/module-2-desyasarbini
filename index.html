@@ -224,11 +224,18 @@
     </section>
     <section id="src-img">
       <h3>help me choose for landing page image</h3>
-      <picture>
-        <source media="(max-width: 520px)" srcset="asset/night-img-jpg" 1x />
-        <source media="(min-width: 521px)" srcset="asset/sunset-img-jpg" 2x />
-        <img src="./asset/background.jpg" alt="nature" style="width: auto" />
-      </picture>
+      <figure>
+        <img
+          class="visible-desktop"
+          src="./asset/night-img.jpg"
+          alt="night-image"
+        />
+        <img
+          class="visible-tablet"
+          src="./asset/sunset-img.jpg"
+          alt="sunset-image"
+        />
+      </figure>
     </section>
     <footer>
       <a href="https://www.linkedin.com/in/desya-sarbini/">Linkedin</a>
