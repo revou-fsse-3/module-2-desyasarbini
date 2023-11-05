@@ -34,6 +34,7 @@ header {
     font-size: 18px;
   }
   .checkbtn {
+    position: absolute;
     display: block;
     font-size: 18px;
   }
@@ -93,19 +94,27 @@ header {
   }
 
   .reading-page {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 400px;
+    grid-template-rows: repeat(4, 180px);
+    gap: 15px;
+  }
+  .reading-page {
     width: auto;
   }
 
   .reading-page .icon {
-    font-size: 18px;
+    font-size: 28px;
   }
 
   .reading-page h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .reading-page p {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
