@@ -4,7 +4,7 @@ const loginLink = document.querySelector(".login-link");
 const signupLink = document.querySelector(".signup-link");
 const btnPopup = document.querySelector(".btnLogin-popup");
 const iconClose = document.querySelector(".icon-close");
-const menuBar = document.querySelector(".checkbtn");
+const menu = document.querySelector(".btn-menu");
 
 // fungsi u/ mendapatkan value (data) dari login form
 const submitform = (e) => {
@@ -62,6 +62,6 @@ function toggleMenu() {
   }
 }
 
-// checkbtn.addEventListener("click", () => {
-//   nav - bar.classList.add("active-popup");
+// btnMenu.addEventListener("click", () => {
+//   menu.classList.add("");
 // });

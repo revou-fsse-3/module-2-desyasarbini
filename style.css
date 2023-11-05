@@ -104,7 +104,7 @@ ke arah kanan akan muncul dan tetap sampai kursor digeser lagi */
 }
 
 /* menubar icon */
-.checkbtn {
+.btn-menu {
   width: 100%;
   padding: 10px 20px;
   font-size: 30px;
@@ -178,12 +178,12 @@ ke arah kanan akan muncul dan tetap sampai kursor digeser lagi */
 
 @keyframes title {
   from {
-    font-size: 50px;
-    color: white;
-  }
-  to {
     font-size: 100px;
     color: #ec9f2b;
+  }
+  to {
+    font-size: 70px;
+    color: white;
   }
 }
 
@@ -437,10 +437,6 @@ bagian form signup dan login */
   background-color: #ffffff;
   text-align: center;
 }
-
-/* .reading-page h2 {
-  grid-column: 1/-1;
-} */
 
 .reading-page .icon {
   font-size: 50px;
