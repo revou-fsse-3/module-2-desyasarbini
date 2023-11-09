@@ -477,7 +477,7 @@ z-index agar tombol x berada di dpn box form dan bisa diklik*/
 
 .slider-wrapper {
   position: relative;
-  width: 76%;
+  max-width: 48rem;
   margin: 0 auto;
 }
 
