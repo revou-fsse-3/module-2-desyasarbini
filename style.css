@@ -39,7 +39,6 @@ header {
 
 /* bagian logo dan judul start */
 .logoweb {
-  /* width: 100%; */
   box-sizing: border-box;
   justify-content: flex-start;
   align-items: center;
@@ -75,7 +74,6 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* width: 100%; */
   height: auto;
 }
 
@@ -155,11 +153,8 @@ ke arah kanan akan muncul dan tetap sampai kursor digeser lagi */
   width: 100px;
   height: 50px;
   background: transparent;
-  /* padding: 10px 20px; */
   color: #ffffff;
   border: 2px solid #ec9f2b;
-  /* background-color: none;
-  outline: none; */
   border-radius: 60px;
   cursor: pointer;
   font-size: 20px;
@@ -438,10 +433,9 @@ z-index agar tombol x berada di dpn box form dan bisa diklik*/
 .login-signup p a:hover {
   text-decoration: underline;
 }
-/* bagian aside selesai
-bagian form signup dan login */
+/* bagian aside selesai form signup dan login */
 
-/* styling pargaraf pd section */
+/* reading page start */
 .reading-page {
   display: grid;
   align-items: center;
@@ -476,16 +470,14 @@ bagian form signup dan login */
   margin: 20px 0 20px 0;
 }
 
+/* slide carousle start */
 .carousel {
   padding: 2rem;
 }
 
-/* slide carousle start */
-
 .slider-wrapper {
   position: relative;
   width: 76%;
-  /* max-width: 48rem; */
   margin: 0 auto;
 }
 
@@ -527,11 +519,9 @@ bagian form signup dan login */
 .slider-nav a:hover {
   opacity: 1;
 }
-
 /* slide carousle stop */
 
-/* gallery grid unsync */
-
+/* gallery grid unsync start*/
 #gallery {
   display: block;
   padding: 20px;

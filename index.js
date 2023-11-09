@@ -104,7 +104,3 @@ toggle.addEventListener("click", function () {
     enableDarkMode();
   }
 });
-
-// btnMenu.addEventListener("click", () => {
-//   menu.classList.add("");
-// });

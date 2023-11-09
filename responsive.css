@@ -36,21 +36,6 @@ header {
     font-size: 30px;
     margin: 0;
   }
-  /* .btn-menu {
-    width: auto;
-    font-size: 30px;
-    background: transparent;
-    color: #ec9f2b;
-    text-align: center;
-    box-sizing: border-box;
-    display: block;
-    cursor: pointer;
-    position: absolute;
-    border: none;
-    margin: auto;
-    font-weight: 500;
-    transition: 0.5s;
-  } */
 
   .menu-toggle {
     display: flex;
@@ -62,9 +47,8 @@ header {
     background-color: #112a3b;
     right: 0;
     top: 0;
-    height: 25vh;
+    height: 28vh;
     width: 100%;
-    /* margin-right: 30px; */
     color: white;
     align-items: center;
     padding: 5px;
@@ -77,35 +61,10 @@ header {
     transform: translateY(0);
   }
 
-  /* .nav-bar .menu li .btnLogin-popup {
-    display: flex;
-    width: 100%;
-    height: 200px;
-    flex-direction: column;
-    text-align: center;
-    background: black;
-    transition: all 0.5s;
-    font-size: 20px;
-    justify-content: space-evenly;
-    overflow: hidden;
-    position: relative;
-    margin: auto;
-    margin-left: 40px;
-    margin-right: 40px;
-    transform: scaleY(1);
-    z-index: 99;
-    transition: transform 0.5s ease, height 0.2s;
-  } */
-
   .menu li {
     align-items: center;
     padding: 5px;
   }
-
-  /* .nav-bar .menu::after,
-  .nav-bar .menu:hover::after {
-    background: none;
-  } */
 
   .frontpage {
     justify-content: space-between;
@@ -133,11 +92,6 @@ header {
     height: 25px;
     font-size: 16px;
   }
-
-  /* .main-page .btn-subscribe:hover {
-    background: #d38715;
-    color: rgb(117, 0, 0);
-  } */
 
   .reading-page {
     display: grid;
@@ -218,16 +172,34 @@ header {
     display: block;
   }
 
-  .menu {
+  .menu-toggle {
+    display: flex;
+    z-index: 2;
+  }
+  .nav-bar ul {
+    position: absolute;
+    flex-direction: column;
+    background-color: #112a3b;
+    right: 0;
+    top: 0;
+    height: 28vh;
     width: 100%;
-    margin-right: 10px;
-    /* align-items: center; */
+    color: white;
+    align-items: center;
+    padding: 5px;
+    transform: translateY(-100%);
+    transition: all 0.8s;
+    z-index: 1;
   }
 
-  .menu li a {
-    margin-right: 10px;
-    text-align: center;
-    display: none;
+  .nav-bar ul.active {
+    transform: translateY(0);
+  }
+
+  .menu li {
+    align-items: center;
+    padding: 5px;
+    font-size: 30px;
   }
 
   .frontpage {
@@ -253,11 +225,6 @@ header {
     height: 25px;
     font-size: 16px;
   }
-
-  /* .main-page .btn-subscribe:hover {
-    background: #d38715;
-    color: rgb(117, 0, 0);
-  } */
 
   aside .wrapper {
     position: absolute;
@@ -322,10 +289,4 @@ header {
   .visible-tablet {
     display: block;
   }
-
-  /* @media only screen and (min-width: 800px) {
-    .logo {
-      display: block;
-    }
-  } */
 }
