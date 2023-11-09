@@ -22,18 +22,37 @@
           <img class="logo" src="./asset/new-logo.svg" alt="logo" />
           <h2>luv2read</h2>
         </div>
+        <div class="dark-mode">
+          <i
+            class="fa-solid fa-moon"
+            style="color: #ffff"
+            id="toggle-dark"
+            aria-label="toggle-dark/light mode"
+          ></i>
+        </div>
         <nav class="nav-bar">
-          <input type="checkbox" id="check" />
-          <button for="check" class="btn-menu">
-            <i class="fa-solid fa-bars"></i>
-          </button>
+          <!-- <button class="btn-menu">
+            <i
+              class="fa-solid fa-bars"
+              id="toggle-menu"
+              aria-label="toggle-menu"
+            ></i>
+          </button> -->
+          <div class="menu-toggle">
+            <input type="checkbox" id="check" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
           <ul class="menu">
-            <li><a href="#">books</a></li>
-            <li><a href="#">comics</a></li>
-            <li><a href="#">recipes</a></li>
+            <li><a href="#books">books</a></li>
+            <li><a href="#stories">stories</a></li>
+            <li><a href="#recipes">recipes</a></li>
             <li><a href="#">favorite</a></li>
-            <button class="btnLogin-popup">login</button>
+            <li><button class="btnLogin-popup" href="#">Login</button></li>
           </ul>
+          <!-- <button class="btnLogin-popup">login</button> -->
         </nav>
       </header>
       <div class="frontpage">
@@ -45,14 +64,14 @@
             voluptatum aliquam ullam eius dicta vero, ut fuga sequi nemo natus
             omnis? Deserunt.
           </p>
-          <button
+          <!-- <button
             class="btn-subscribe"
             type="submit"
             value="kirim"
             onclick="subscribe(event)"
           >
             keep me updated
-          </button>
+          </button> -->
         </main>
         <aside>
           <!-- layout untuk login dan signup form -->
@@ -157,6 +176,7 @@
         </aside>
       </div>
     </div>
+
     <section class="reading-page">
       <!-- <h2>Read Section</h2> -->
       <div class="books">
@@ -192,6 +212,22 @@
         </p>
       </div>
     </section>
+    <section class="carousel" aria-label="book-gallery">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img id="slide-1" src="./asset/slide-1.png" alt="img-slide-1" />
+          <img id="slide-2" src="./asset/slide-2.png" alt="img-slide-2" />
+          <img id="slide-3" src="./asset/slide-3.jpg" alt="img-slide-3" />
+          <img id="slide-4" src="./asset/slide-4.png" alt="img-slide-4" />
+        </div>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+          <a href="#slide-4"></a>
+        </div>
+      </div>
+    </section>
     <section id="gallery">
       <h2>Gallery</h2>
       <div class="gallery-container">
@@ -223,7 +259,7 @@
       </div>
     </section>
     <section id="src-img">
-      <h3>help me choose for landing page image</h3>
+      <h3>srcset image</h3>
       <figure>
         <img
           class="visible-desktop"

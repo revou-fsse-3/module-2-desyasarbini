@@ -4,7 +4,11 @@ const loginLink = document.querySelector(".login-link");
 const signupLink = document.querySelector(".signup-link");
 const btnPopup = document.querySelector(".btnLogin-popup");
 const iconClose = document.querySelector(".icon-close");
-const menu = document.querySelector(".btn-menu");
+const menuToggle = document.querySelector(".menu-toggle input");
+const navBar = document.querySelector(".nav-bar ul");
+const toggle = document.getElementById("toggle-dark");
+const body = document.querySelector("body");
+let darkMode = localStorage.getItem("dark-mode");
 
 // fungsi u/ mendapatkan value (data) dari login form
 const submitform = (e) => {
@@ -53,14 +57,53 @@ iconClose.addEventListener("click", () => {
   wrapper.classList.remove("active-popup");
 });
 
-function toggleMenu() {
-  var menu = document.getElementsByClassName("toggle");
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
+// Menu bar ketika di klik
+menuToggle.addEventListener("click", function () {
+  navBar.classList.toggle("active");
+});
+
+// fungsi untuk local storage
+function setInitialState() {
+  if (darkMode === "on") {
+    enableDarkMode();
   } else {
-    menu.style.display = "block";
+    enableLightMode();
   }
 }
+
+// dark-mode
+function enableDarkMode() {
+  body.style.background = "#112a3b";
+  body.style.color = "white";
+  body.style.transition = "2s";
+  darkMode = "on";
+  localStorage.setItem("dark-mode", "on");
+  toggle.classList.remove("fa-moon");
+  toggle.classList.add("fa-sun");
+}
+
+// light-mode
+function enableLightMode() {
+  body.style.background = "white";
+  body.style.color = "#112a3b";
+  body.style.transition = "2s";
+  darkMode = "off";
+  localStorage.setItem("dark-mode", "off");
+  toggle.classList.remove("fa-sun");
+  toggle.classList.add("fa-moon");
+}
+
+// set the initial state
+setInitialState();
+
+// toggle dark mode ketika di klik
+toggle.addEventListener("click", function () {
+  if (darkMode === "on") {
+    enableLightMode();
+  } else {
+    enableDarkMode();
+  }
+});
 
 // btnMenu.addEventListener("click", () => {
 //   menu.classList.add("");

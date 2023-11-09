@@ -1,11 +1,12 @@
-/* import font dari google font */
-/* @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"); */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Dosis";
+}
+
+body {
+  color: #112a3b;
 }
 
 @font-face {
@@ -38,7 +39,7 @@ header {
 
 /* bagian logo dan judul start */
 .logoweb {
-  width: 100%;
+  /* width: 100%; */
   box-sizing: border-box;
   justify-content: flex-start;
   align-items: center;
@@ -52,9 +53,20 @@ header {
 }
 
 .logoweb h2 {
-  font-size: 26px;
+  font-size: 30px;
   margin: 10px;
   color: white;
+}
+
+.dark-mode {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#toggle-dark {
+  font-size: 30px;
+  cursor: pointer;
 }
 /* bagian logo dan judul stop*/
 
@@ -63,8 +75,8 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
-  height: 30px;
+  /* width: 100%; */
+  height: auto;
 }
 
 .menu {
@@ -109,34 +121,45 @@ ke arah kanan akan muncul dan tetap sampai kursor digeser lagi */
   transform: scaleX(1);
 }
 
-/* menubar icon */
-.btn-menu {
-  width: 100%;
-  padding: 10px 20px;
-  font-size: 30px;
-  color: #ec9f2b;
-  text-align: right;
-  box-sizing: border-box;
+.menu-toggle {
   display: none;
-  cursor: pointer;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
   position: relative;
-  z-index: 1;
 }
 
-#check {
-  display: none;
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #ec9f2b;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle input {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -5px;
+  opacity: 0;
+  cursor: pointer;
 }
 /* menubar icon selesai */
 
 /* styling btn login dari bg sampai transisi waktu mnculnya bg btn login */
-.menu .btnLogin-popup {
-  width: 130px;
+.btnLogin-popup {
+  width: 100px;
   height: 50px;
   background: transparent;
+  /* padding: 10px 20px; */
   color: #ffffff;
   border: 2px solid #ec9f2b;
-  background-color: none;
-  outline: none;
+  /* background-color: none;
+  outline: none; */
   border-radius: 60px;
   cursor: pointer;
   font-size: 20px;
@@ -145,7 +168,7 @@ ke arah kanan akan muncul dan tetap sampai kursor digeser lagi */
 }
 
 /* warna bg akan muncul saat ditunjuk tombol login yg baru */
-.menu .btnLogin-popup:hover {
+.btnLogin-popup:hover {
   background: #ec9f2b;
   color: #ffffff;
   text-shadow: 0 1px black;
@@ -159,8 +182,8 @@ ke arah kanan akan muncul dan tetap sampai kursor digeser lagi */
   width: 100%;
   position: relative;
   display: flex;
-  height: 550px;
-  z-index: 1;
+  height: 80%;
+  /* z-index: 1; */
 }
 
 /* bagian main */
@@ -209,12 +232,6 @@ ke arah kanan akan muncul dan tetap sampai kursor digeser lagi */
   font-size: 18px;
   font-weight: 500;
   transition: 0.5s;
-}
-
-.main-page .btn-subscribe:hover {
-  background: #d38715;
-  color: white;
-  text-shadow: 0 1px black;
 }
 
 /* bagian aside */
@@ -440,7 +457,7 @@ bagian form signup dan login */
 .stories,
 .recipes,
 .others {
-  background-color: #ffffff;
+  background-color: transparent;
   text-align: center;
 }
 
@@ -458,6 +475,62 @@ bagian form signup dan login */
   font-size: 18px;
   margin: 20px 0 20px 0;
 }
+
+.carousel {
+  padding: 2rem;
+}
+
+/* slide carousle start */
+
+.slider-wrapper {
+  position: relative;
+  width: 76%;
+  /* max-width: 48rem; */
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 10px;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #ffffff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+/* slide carousle stop */
+
+/* gallery grid unsync */
 
 #gallery {
   display: block;
@@ -511,21 +584,36 @@ bagian form signup dan login */
   grid-row: 1 / span 3;
 }
 
+#src-img {
+  display: block;
+  margin: 20px;
+  height: auto;
+  width: auto;
+  justify-content: center;
+}
+
+#src-img h3 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
 .visible-desktop {
-  width: 300px;
-  height: 150px;
   display: flex;
+  width: 100%;
+  height: auto;
   justify-content: center;
 }
 
-.visible-mobile {
-  width: 300px;
-  height: 150px;
+.visible-tablet {
   display: flex;
+  width: 100%;
+  height: auto;
   justify-content: center;
 }
 
-/* styling footer */
+/* footer */
 footer {
   display: flex;
   width: 100%;
@@ -536,7 +624,7 @@ footer {
   background: #112a3b;
 }
 
-/* styling tulisan footer */
+/* tulisan footer */
 footer a {
   color: white;
   font-size: 20px;
