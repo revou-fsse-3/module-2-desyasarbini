@@ -37,6 +37,10 @@ header {
     margin: 0;
   }
 
+  #toggle-dark {
+    font-size: 26px;
+  }
+
   .menu-toggle {
     display: flex;
     z-index: 2;
@@ -47,7 +51,7 @@ header {
     background-color: #112a3b;
     right: 0;
     top: 0;
-    height: 40vh;
+    height: 30vh;
     width: 100%;
     color: white;
     align-items: center;
@@ -113,6 +117,12 @@ header {
 
   .reading-page p {
     font-size: 20px;
+  }
+
+  .slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: fill;
   }
 
   #gallery .gallery-container {
@@ -182,7 +192,7 @@ header {
     background-color: #112a3b;
     right: 0;
     top: 0;
-    height: 40vh;
+    height: 32vh;
     width: 100%;
     color: white;
     align-items: center;
